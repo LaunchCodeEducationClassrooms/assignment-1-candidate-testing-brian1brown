@@ -12,6 +12,7 @@ let questions = ["Who was the first American woman in space? ", "True or false: 
 let correctAnswers = ["Sally Ride", "True", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 let numCorrect = 0;
+let grade = 0;
 
 
 
@@ -38,7 +39,7 @@ function gradeQuiz(candidateAnswers) {
     }
   }
   
-  let grade = (numCorrect / questions.length) * 100;
+  grade = (numCorrect / questions.length) * 100;
   
   console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of 5 responses correct) <<<`);
   if (grade >= 80){
@@ -56,8 +57,7 @@ function runProgram() {
   console.log(`Greetings ${candidateName}.`);
   
   askQuestion();
-  // gradeQuiz(this.candidateAnswers); ORIGINAL LINE
-  gradeQuiz(candidateAnswers);
+  gradeQuiz(this.candidateAnswers);
 }
 
 // Don't write any code below this line //
